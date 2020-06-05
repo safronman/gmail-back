@@ -32,6 +32,7 @@ app.post('/send-message', function (req, res) {
     const email = req.body.email
     const name = req.body.name
     const message = req.body.message
+    console.log(`email: ${email}`, `name: ${name}`, `message: ${message}`)
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
