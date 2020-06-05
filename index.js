@@ -29,7 +29,6 @@ app.get('/', function (req, res) {
 });
 
 app.post('/send-message', function (req, res) {
-    debugger
     const email = req.body.email
     const name = req.body.name
     const message = req.body.message
@@ -60,7 +59,7 @@ app.post('/send-message', function (req, res) {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log('error111: ', error.message);
+            return console.log('error: ', error.message);
         }
         console.log('success');
     });
